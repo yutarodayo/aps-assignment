@@ -1,0 +1,64 @@
+@use "global" as *;
+
+
+.swiper-button__wrapper { 
+display: none;
+}
+
+@include mq(md) {
+
+  .swiper-button__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+  }
+
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 50%; 
+    margin-left: rem(239);
+  }
+
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+left: 50%;
+margin-left: rem(389);
+  }
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: block;
+    top: rem(-75);
+  height: rem(80);
+  width: rem(80);
+
+}
+
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: rem(80);
+  margin: auto;
+  width: rem(80);
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(../images/only_pc/allow_left.svg);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(../images/only_pc/allow_right.svg);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: 100%;
+  max-width: 100%;
+}
+
+}

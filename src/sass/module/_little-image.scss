@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.little-image__layout {
+    @include mq(md) {
+        position: relative;
+    }
+}
+
+.little-image {
+    display: none;
+    
+    @include mq(md) {
+        display: block;
+        position: absolute;
+        z-index: 30;
+    }
+    
+}
+
+.little-image__coral {
+
+    @include mq(md) {
+    
+    width: 22.0454%; //194/880
+    right: -10%;
+    bottom: -30%;
+    }
+}
+
+.little-image__kingyo-right {
+    @include mq(md) {
+    
+    width: 21%; //301/1080 その後画像で微調整
+    top: 3%;
+    left: 5%;
+    }
+}
+
+.little-image__kingyo-left--white {
+    @include mq(md) {
+    
+        left: 0;
+        max-width: rem(437);
+        top: 0;
+        width: 39.3472%;
+        transform: translate(-13%, -117%);
+    }
+}
+
+.little-image__dragon {
+    @include mq(md) {
+    
+        right: 12%;
+        bottom: 7%;
+        width: 4.8611%; /* 71/1440 */
+        max-width: rem(71);
+        
+    }
+}
+
+.little-image__kingyo-left {
+    @include mq(md) {
+        bottom: 5%;
+        left: 7%;
+        max-width: rem(437);
+        width: 30.3472%;
+        
+    }
+}
+
+.little-image__layout--contact {
+    position: relative;
+}
+
+.little-image__kingyo-left--contact {
+    right: -5%;
+    top: -5%;
+    max-width: rem(301);
+    width: 35%; /* 109/295からの微調整 */
+    position: absolute;
+
+    @include mq(md) {
+        
+        right: -12%;
+        top: -8%;
+        max-width: rem(301);
+        width: 59.2520%; /* 301/508からの微調整 */
+
+        
+    }
+}

@@ -1,0 +1,34 @@
+@use "global" as *;
+
+.price__inner {
+    padding: rem(80) 0;
+    background-color: #DDF0F1;
+
+    @include mq(md) {
+    padding: rem(100) 0;
+    }
+}
+
+.price__content {
+    margin-top: rem(24);
+
+    @include mq(md) {
+    margin-top: rem(40);
+    }
+}
+
+
+.table__wrapper {
+    @include mq(md) {
+    margin-right: rem(90);
+    }
+}
+
+.button__space--price {
+    margin-top: rem(40);
+
+@include mq(md) {
+    margin-top: rem(80);
+}
+}
+

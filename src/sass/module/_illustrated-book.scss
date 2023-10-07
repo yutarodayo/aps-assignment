@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.illustrated-book__container {
+    width: 100%;
+
+    @include mq(md) {
+    display: flex;
+    }
+}
+
+.illustrated-book__img {
+
+    @include mq(md) {
+    width: 50%;
+    }
+
+}
+
+.illustrated-book__content {
+@include mq(md) {
+width: 50%;
+margin-left: rem(48);
+}
+}
+
+.illustrated-book__header {
+    border-bottom: solid rem(1) $accent;
+}
+
+.illustrated-book__title {
+font-size: rem(20);
+line-height: 1.2;
+font-weight: $bold;
+color: $text-base;
+
+@include mq(md) {
+font-size: rem(24);
+}
+}
+
+.illustrated-book__body {
+margin-top: rem(8);
+}
+
+.illustrated-book__text {
+    color: $text-base;
+    line-height: 1.5;
+    font-weight: $regular;
+}
+
+.button__space--illustrated-book {
+    margin-top: rem(40);
+}

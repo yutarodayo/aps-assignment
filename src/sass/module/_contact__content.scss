@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.contact__content {
+    text-shadow: 0 rem(4) rem(3) rgba(0, 0, 0, 0.3098);
+
+    @include mq(md) {
+    text-shadow: none;
+    }
+}
+
+.section-title.contact__title {
+    font-size: rem(80);
+    line-height: 1;
+    font-weight: $regular;
+    
+}
+
+.contact__text {
+    font-size: rem(14);
+    line-height: 1.2857;
+    font-weight: $regular;
+    color: $accent; 
+text-align: center;
+margin-top: rem(8);
+}
+
+.button__bottom--contact {
+   box-shadow: 0 rem(4) rem(3) rgba(0, 0, 0, 0.1198); 
+
+   @include mq(md) {
+   box-shadow: none;
+   }
+}
+
+.button__wrapper {
+   margin-top: rem(40); 
+}

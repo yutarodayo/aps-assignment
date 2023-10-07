@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.button__wrapper {
+    display: block;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    position: relative;
+}
+
+.button__top {
+  font-size: rem(14);
+  line-height: 1.5714;
+  color: $white;
+  background-color: $accent;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: rem(16) rem(78) rem(16) rem(40);
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+  position: relative;
+}
+
+.button__top::after {
+    background-color: $white;
+    border: rem(1) solid $accent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+  }
+
+  .button__top:hover {
+    color: $accent;
+  }
+  .button__top:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .button__top span {
+    position: relative;
+  }
+
+  .button__top span::before {
+    content: '';
+	position: absolute;
+	top: calc(50% - rem(2));
+	right: rem(-44);
+	transform: translateY(calc(-50% - rem(2))) rotate(45deg);
+	width: rem(6);
+	height: rem(1);
+	background: $white;
+
+    @include mq(md) {
+    right: rem(-49);
+    }
+  }
+
+  .button__top span::after {
+    content: '';
+	position: absolute;
+	top: 50%;
+	right: rem(-44);
+	transform: translateY(-50%);
+	width: rem(30);
+	height: rem(1);
+	background-color: $white;
+
+    @include mq(md) {
+    width: rem(40);
+    right: rem(-50);
+    }
+  }
+
+
+.button__bottom {
+  position: absolute;
+  top: rem(4);
+  left: rem(4);
+  width: 100%;
+  height: 100%;
+  border: rem(1) solid $accent;
+  transition: 0.2s;
+  z-index: 1;
+}

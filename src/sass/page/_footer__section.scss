@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.footer__inner.inner {
+    padding-left: rem(12);
+    padding-right: rem(12);
+
+    @include mq(md) {
+        padding-left: rem(180);
+        padding-right: rem(180);
+    }
+}
+
+.footer__inner {
+    padding-top: rem(48);
+    padding-bottom: rem(56);
+
+    @include mq(md) {
+        padding-top: rem(80);
+        padding-bottom: rem(80);
+    }
+}
+
+.footer__header {
+    @include mq(md) {
+    display: flex;
+    align-items: end;
+    }
+}
+
+.sns__wrapper {
+    @include mq(md) {
+    margin-left: rem(40);
+}
+}
+
+.footer-left2,
+.footer-right1,
+.footer-right2 {
+@include mq(md) {
+margin-left: rem(120);
+}
+}
+
+.footer-right__wrapper {
+   
+    margin-left: rem(15);
+
+    @include mq(md) {
+    margin-left: 0;
+    }
+  }
+
+  .footer__copy {
+    margin-top: rem(40);
+
+    @include mq(md) {
+    margin-top: rem(80);
+    }
+  }

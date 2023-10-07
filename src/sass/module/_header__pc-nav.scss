@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.pc-nav {
+display: none;
+
+@include mq(md) {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+    
+   
+}
+
+.pc-nav__items {
+    display: flex;
+    
+}
+
+.pc-nav__item {
+    color: $white;
+    text-align: center;
+    
+}
+
+
+.pc-nav__item:not(:first-child) {
+    padding-left: rem(40);
+    
+}
+
+.pc-nav__item a {
+    font-size: rem(18);
+}
+
+.pc-nav__item p {
+    font-size: rem(10);
+    margin-top: rem(4);
+}

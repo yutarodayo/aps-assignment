@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table__header {
+  text-align-last: left;
+  color: $text-base;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  padding-top: rem(40);
+}
+
+tr:first-child>* {
+    @include mq(md) {
+        padding-top: 0;
+    }
+    
+}
+    
+
+.table__line {
+  border-top: 1px solid $accent;
+}
+
+.table td {
+    color: $text-base;
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: 1.7143;
+  padding-top: rem(8);
+}
+
+.table__item {
+  text-align-last: left;
+  width: calc(100% - 23%);
+}
+
+.table__data {
+  text-align: right;
+  width: 23%; //100/345
+}
+
+
+tr:last-child>* {
+    @include mq(md) {
+        padding-bottom: rem(98);
+    }
+    
+}

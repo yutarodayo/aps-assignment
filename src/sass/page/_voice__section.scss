@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.voice__inner.inner {
+  padding: rem(80) rem(15);
+
+  @include mq(md) {
+    padding: rem(140) 0;
+  }
+}
+
+.voice-cards__space {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.button__space--voice {
+    margin-top: rem(40);
+
+    @include mq(md) {
+    margin-top: rem(80);
+    }
+}
