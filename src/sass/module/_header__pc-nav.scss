@@ -8,10 +8,7 @@ display: none;
     display: flex;
     align-items: center;
     justify-content: end;
-    
 }
-    
-   
 }
 
 .pc-nav__items {
@@ -25,10 +22,13 @@ display: none;
     
 }
 
+.pc-nav__item:hover {
+    opacity: 0.5;
+  }
+
 
 .pc-nav__item:not(:first-child) {
     padding-left: rem(40);
-    
 }
 
 .pc-nav__item a {
