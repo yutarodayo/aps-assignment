@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.swiper__container--sp {
+display: block;
+
+@include mq(md) {
+display: none;
+}
+}
+
+.swiper__container--pc {
+    display: none;
+    @include mq(md) {
+    display: block;
+    }
+}
+
+.main-view__slide {
+position: relative;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+.main-view__slide img{
+
+@include mq(md) {
+max-width: rem(1440);
+
+}
+}
+
+
+.main-view__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-view__title {
+  color: $white;
+  text-align: center;
+  font-weight: $regular;
+  font-size: rem(40);
+  letter-spacing: rem(21.6);
+
+  @include mq(md) {
+    font-size: rem(80);
+    letter-spacing: rem(43.2);
+  }
+}
+
+.main-view__subtitle {
+  color: $white;
+  font-size: rem(20);
+  text-align: center;
+}

@@ -1,14 +1,14 @@
 @use "global" as *;
 
-.section-title__campaign {
-    margin-top: rem(40);
+.campaign__inner {
+    padding-top: rem(120);
 
     @include mq(md) {
-    margin-top: rem(120);
+    padding-top: rem(80);
     }
 }
 
-.campaign__inner {
+.campaign__content {
     padding-left: rem(15);
 
     @include mq(md) {

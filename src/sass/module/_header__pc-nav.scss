@@ -19,16 +19,17 @@ display: none;
 .pc-nav__item {
     color: $white;
     text-align: center;
+    display: block;
+    padding-left: rem(20);
+    padding-right: rem(20);
+    padding: rem(20) rem(20);
+    cursor: pointer;
     
 }
 
-.pc-nav__item:hover {
-    opacity: 0.5;
-  }
 
-
-.pc-nav__item:not(:first-child) {
-    padding-left: rem(40);
+.pc-nav__item {
+ 
 }
 
 .pc-nav__item a {

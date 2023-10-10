@@ -1,25 +1,54 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-// drawer
+
+/*===================================================
+drawer
+===================================================*/
 $(".js-hamburger").on("click", function (e) {
     e.preventDefault();
     $(".js-hamburger").toggleClass("is-active");
     $(".header").toggleClass("is-active");
-    $(".sp-nav__wrapper").toggleClass("is-active");
+    $(".drawer__wrapper").toggleClass("is-active");
+    $(".drawer__background").toggleClass("is-active");
     return false;
   });
 
-  // /drawer
+  /*===================================================
+  /drawer
+  ===================================================*/
 
-  //swiper
-  const swiper = new Swiper(".swiper", {
+  /*===================================================
+  swiper main-view
+  ===================================================*/
+  const mvswiper = new Swiper(".main-view__swiper", {
+    
+   
+    
+    loop: true,
+
+    // スライドの表示枚数：768px未満の場合
+  slidesPerView: 1,
+  spaceBetween: 0,
+
+
+  });
+
+  /*===================================================
+  /swiper main-view
+  ===================================================*/
+
+
+  /*===================================================
+  swiper__campaign
+  ===================================================*/
+  const swiper = new Swiper(".campaign__swiper", {
     // 前後の矢印
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    
+
     loop: true,
 
     // スライドの表示枚数：768px未満の場合
@@ -56,23 +85,15 @@ $(".js-hamburger").on("click", function (e) {
 
   });
 
-  // /swiper
+  /*===================================================
+  /swiper__campaign
+  ===================================================*/
 
 
   /*===================================================
   to top + スクロール検知
   ===================================================*/
-// $(window).on("scroll", function() {
-//   // トップから100px以上スクロールしたら
-//   if (100 < $(this).scrollTop()) {
-//     // is-showクラスをつける
-//  $('.to_top').addClass( 'is_show' );
-//   } else {
-//     // 100pxを下回ったらis-showクラスを削除
-//   $('.to_top').removeClass( 'is_show' );
-//   }
-// });
-// ページトップボタン
+
 $(function () {
   const to_top = $("#to_top");
   to_top.hide();
@@ -119,6 +140,8 @@ $(function () {
 /*===================================================
 背景色⇒表示
 ===================================================*/
+//右から左
+
 //要素の取得とスピードの設定
 var box = $('.colorbox'),
     speed = 700;  
@@ -145,6 +168,8 @@ box.each(function(){
      });
 });
 
+//左から右
+
 var box = $('.colorbox_right'),
     speed = 700;  
  
@@ -170,6 +195,7 @@ box.each(function(){
      });
 });
 
+//上から下
 
 var box = $('.colorbox_top'),
     speed = 700;  
@@ -196,9 +222,39 @@ box.each(function(){
      });
 });
 
-
 /*===================================================
 /背景色⇒表示
+===================================================*/
+
+/*===================================================
+ローディングアニメーション
+===================================================*/
+var box = $('.colorbox_top'),
+    speed = 700;  
+ 
+//.colorboxの付いた全ての要素に対して下記の処理を行う
+box.each(function(){
+    $(this).append('<div class="color"></div>')
+    var color = $(this).find($('.color')),
+    image = $(this).find('img');
+    var counter = 0;
+ 
+    image.css('opacity','0');
+    color.css('height','0%');
+    //inviewを使って背景色が画面に現れたら処理をする
+    color.on('inview', function(){
+        if(counter == 0){
+　　　　　$(this).delay(200).animate({'height':'100%'},speed,function(){
+                   image.css('opacity','1');
+                   $(this).css({'bottom':'0' , 'top':'auto'});
+                   $(this).animate({'height':'0%'},speed);
+                })
+            counter = 1;
+          }
+     });
+});
+/*===================================================
+/ローディングアニメーション
 ===================================================*/
 
 });
