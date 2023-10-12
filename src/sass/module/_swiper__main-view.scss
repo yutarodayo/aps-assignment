@@ -1,43 +1,27 @@
 @use "global" as *;
 
-.swiper__container--sp {
-display: block;
-
-@include mq(md) {
-display: none;
-}
+.main-view {
+  position: relative;
 }
 
-.swiper__container--pc {
-    display: none;
-    @include mq(md) {
-    display: block;
-    }
-}
+.swiper__main-view {
 
-.main-view__slide {
-position: relative;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-
+height: 100vh;
+min-height: 100vh;
 
 }
-.main-view__slide img{
 
-@include mq(md) {
-max-width: rem(1440);
-
+.swiper__main-view img {
+  object-fit: cover;
+  height: 100vh;
 }
-}
-
 
 .main-view__content {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50.2%;
+    left: 49.8%;
     transform: translate(-50%, -50%);
+    z-index: 10;
 }
 
 .main-view__title {
@@ -46,6 +30,8 @@ max-width: rem(1440);
   font-weight: $regular;
   font-size: rem(40);
   letter-spacing: rem(21.6);
+  line-height: 1.2;
+  text-indent: rem(20);
 
   @include mq(md) {
     font-size: rem(80);

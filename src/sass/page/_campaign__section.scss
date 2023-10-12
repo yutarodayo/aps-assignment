@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .campaign__inner {
-    padding-top: rem(120);
+    padding-top: rem(37);
 
     @include mq(md) {
-    padding-top: rem(80);
+    padding-top: rem(120);
     }
 }
 
@@ -17,7 +17,7 @@
 }
 
 .swiper__space {
-    margin-top: rem(40);
+    margin-top: rem(23);
 }
 
 .button__space--campaign {

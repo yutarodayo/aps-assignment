@@ -1,6 +1,66 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+/*===================================================
+loading-animation
+===================================================*/
+const mainContent = $(".main-content");
+const loadingAnimation = $(".loading-animation__wrapper");
+const leftImage = $(".loading-animation__left");
+const rightImage = $(".loading-animation__right");
+const title = $(".loading__content");
+$(document).ready(function() {
+  mainContent.css("display", "none")
+  title.css("opacity", "1");
+  /*===================================================
+  
+  ===================================================*/
+  setTimeout(function() {
+    title.css("opacity", "0");
+  }, 1000); 
+
+  setTimeout(function() {
+    leftImage.css("animation", "slideUpLeft 2s forwards");
+    monitorLeftImageMovement();
+  }, 2000); 
+  
+
+  let initialOffset = $('.loading-animation__left').offset().top;
+
+  function monitorLeftImageMovement() {
+      let currentOffset = $('.loading-animation__left').offset().top;
+  
+      if (initialOffset - currentOffset >= 60) {
+          $(".loading-animation__right").css("animation", "slideUpRight 2s forwards");
+      } else {
+          // 条件が満たされていない場合、次のアニメーションフレームで継続的にチェックします。
+          requestAnimationFrame(monitorLeftImageMovement);
+      }
+  }
+  
+  // setTimeout(function() {
+  //   rightImage.css("animation", "slideUpRight 2s forwards");
+  // }, 2200);  // 1秒遅延で右画像のアニメーションを開始
+
+  // フラッシュとタイトルのフェードイン後の処理
+
+  setTimeout(function() {
+    // アニメーション要素をフェードアウト
+    loadingAnimation.fadeOut(1500);
+
+  }, 5500); 
+
+  setTimeout(function() {
+
+    // 通常ページのコンテンツをフェードイン
+    mainContent.fadeIn(1000);
+  }, 7000);
+},
+)
+  
+/*===================================================
+/loading-animation
+===================================================*/
 
 /*===================================================
 drawer
@@ -22,9 +82,7 @@ $(".js-hamburger").on("click", function (e) {
   swiper main-view
   ===================================================*/
   const mvswiper = new Swiper(".main-view__swiper", {
-    
-   
-    
+        
     loop: true,
 
     // スライドの表示枚数：768px未満の場合
@@ -143,11 +201,11 @@ $(function () {
 //右から左
 
 //要素の取得とスピードの設定
-var box = $('.colorbox'),
+var boxtoleft = $('.colorbox'),
     speed = 700;  
  
 //.colorboxの付いた全ての要素に対して下記の処理を行う
-box.each(function(){
+boxtoleft.each(function(){
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),
     image = $(this).find('img');
@@ -170,11 +228,11 @@ box.each(function(){
 
 //左から右
 
-var box = $('.colorbox_right'),
+var boxtoright = $('.colorbox_right'),
     speed = 700;  
  
 //.colorboxの付いた全ての要素に対して下記の処理を行う
-box.each(function(){
+boxtoright.each(function(){
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),
     image = $(this).find('img');
@@ -197,11 +255,11 @@ box.each(function(){
 
 //上から下
 
-var box = $('.colorbox_top'),
+var boxtobottom = $('.colorbox_top'),
     speed = 700;  
  
 //.colorboxの付いた全ての要素に対して下記の処理を行う
-box.each(function(){
+boxtobottom.each(function(){
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),
     image = $(this).find('img');
@@ -224,37 +282,6 @@ box.each(function(){
 
 /*===================================================
 /背景色⇒表示
-===================================================*/
-
-/*===================================================
-ローディングアニメーション
-===================================================*/
-var box = $('.colorbox_top'),
-    speed = 700;  
- 
-//.colorboxの付いた全ての要素に対して下記の処理を行う
-box.each(function(){
-    $(this).append('<div class="color"></div>')
-    var color = $(this).find($('.color')),
-    image = $(this).find('img');
-    var counter = 0;
- 
-    image.css('opacity','0');
-    color.css('height','0%');
-    //inviewを使って背景色が画面に現れたら処理をする
-    color.on('inview', function(){
-        if(counter == 0){
-　　　　　$(this).delay(200).animate({'height':'100%'},speed,function(){
-                   image.css('opacity','1');
-                   $(this).css({'bottom':'0' , 'top':'auto'});
-                   $(this).animate({'height':'0%'},speed);
-                })
-            counter = 1;
-          }
-     });
-});
-/*===================================================
-/ローディングアニメーション
 ===================================================*/
 
 });
