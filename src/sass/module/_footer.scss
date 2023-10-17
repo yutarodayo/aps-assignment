@@ -3,11 +3,11 @@
 .footer {
   background-color: $accent;
   width: 100%;
-  height: rem(739);
+  height: 100%;
 
-  @include mq(md) {
-  height: rem(559);
-  }
+  // @include mq(md) {
+  // height: rem(559);
+  // }
 }
 
 

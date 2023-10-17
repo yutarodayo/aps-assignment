@@ -807,7 +807,7 @@ a {
 
 .footer {
 	background-color: #408F95;
-	height: 46.1875rem;
+	height: 100%;
 	width: 100%;
 }
 
@@ -1834,10 +1834,6 @@ html {
 	padding-left: 7.5%;
 	padding-right: 10.3704%;
 	width: 47.037%;
-}
-
-.footer {
-	height: 34.9375rem;
 }
 
 .footer__header {
