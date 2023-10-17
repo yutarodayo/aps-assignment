@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .voice__inner.inner {
-  padding: rem(80) rem(15);
+  padding: rem(80) rem(15) rem(83);
 
   @include mq(md) {
-    padding: rem(140) 0;
+    padding: rem(134) rem(180) rem(145);
   }
 }
 
@@ -12,12 +12,13 @@
   margin-top: rem(40);
 
   @include mq(md) {
-    margin-top: rem(30);
+    margin-top: rem(27);
   }
 }
 
-.button__space--voice {
+.button__wrapper.button__space--voice {
     margin-top: rem(40);
+    padding-right: rem(1);
 
     @include mq(md) {
     margin-top: rem(80);

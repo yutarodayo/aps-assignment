@@ -2,30 +2,35 @@
 
 .campaign__inner {
     padding-top: rem(37);
+    
 
     @include mq(md) {
-    padding-top: rem(120);
+    padding-top: rem(109);
     }
 }
 
 .campaign__content {
-    padding-left: rem(15);
+    padding-left: rem(10);
 
     @include mq(md) {
-    padding-left: rem(180);
+    padding-left: rem(176);
     }
 }
 
 .swiper__space {
     margin-top: rem(23);
+
+    @include mq(md) {
+    margin-top: rem(33);
+    }
 }
 
-.button__space--campaign {
-margin-top: rem(40);
+.button__wrapper.button__space--campaign {
+margin-top: rem(35);
 margin-left: auto;
 margin-right: auto;
 
 @include mq(md) {
-margin-top: rem(80);
+margin-top: rem(75);
 }
 }

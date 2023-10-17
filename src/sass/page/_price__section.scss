@@ -1,19 +1,22 @@
 @use "global" as *;
 
-.price__inner {
-    padding: rem(80) 0;
+.price__inner.inner {
+    padding: rem(76) rem(15) rem(83);
     background-color: #DDF0F1;
 
     @include mq(md) {
-    padding: rem(100) 0;
+    padding-top: rem(89);
+    padding-left: rem(180);
+    padding-right: rem(180);
+    padding-bottom: rem(102);
     }
 }
 
 .price__content {
-    margin-top: rem(24);
+    margin-top: rem(26);
 
     @include mq(md) {
-    margin-top: rem(40);
+    margin-top: rem(37);
     }
 }
 
@@ -24,8 +27,8 @@
     }
 }
 
-.button__space--price {
-    margin-top: rem(40);
+.button__wrapper.button__space--price {
+    margin-top: rem(36);
 
 @include mq(md) {
     margin-top: rem(80);

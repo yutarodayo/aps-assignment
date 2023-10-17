@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .swiper__padding {
-  padding: rem(4) 0;
+  padding: rem(4) rem(4);
 }
 // box-shadoの上下表示用
 
@@ -20,12 +20,12 @@ display: none;
   }
 
   .swiper-button-prev, .swiper-rtl .swiper-button-next {
-    left: 50%; 
+    left: 47.9%; 
     margin-left: rem(239);
   }
 
   .swiper-button-next, .swiper-rtl .swiper-button-prev {
-left: 50%;
+left: 48.7%;
 margin-left: rem(389);
   }
 
@@ -33,7 +33,7 @@ margin-left: rem(389);
 .swiper-button-prev,
 .swiper-button-next {
     display: block;
-    top: rem(-75);
+    top: rem(-45);
   height: rem(80);
   width: rem(80);
 
@@ -62,4 +62,11 @@ margin-left: rem(389);
   background-image: url(../images/only_pc/allow_right.svg);
 }
 
+}
+
+.swiper-slide {
+  @include mq(md) {
+    margin-right: rem(33);
+  
+  }
 }

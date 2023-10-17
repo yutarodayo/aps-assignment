@@ -22,8 +22,13 @@
 z-index: 9999;
 }
 
-.drawer {
+.drawer__inner {
   display: flex;
+}
+
+.drawer__inner.inner {
+  padding-left: rem(14);
+  padding-right: rem(14);
 }
 
 
@@ -45,7 +50,12 @@ z-index: 9999;
 .drawer__item a {
   font-size: rem(16);
   display: block;
-  line-height: 1.125;
+  line-height: 1.14;
+}
+
+.drawer__item a:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 
@@ -57,7 +67,7 @@ z-index: 9999;
 
 .drawer__item--main a {
   position: relative;
-  
+
 }
 
 .drawer__item--main a::before {
@@ -65,11 +75,11 @@ z-index: 9999;
     display: inline-block;
   transform: scale(1.0);
   position: absolute;
-  top: 0;
-  left: rem(-22);
+  top: rem(-3);
+  left: rem(-21);
     
 }
 
 .drawer__item--main:first-of-type {
-    padding-top: rem(24);
+    padding-top: rem(25.7);
   }

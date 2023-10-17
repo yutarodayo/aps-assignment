@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .information__inner {
-padding: rem(80) 0;
+padding-top: rem(80);
+padding-bottom: rem(84);
 background: $background_green;
 
 @include mq(md) {
@@ -9,8 +10,24 @@ padding: rem(100) 0;
 }
 }
 
+.inner.information__inner {
+    padding-left: rem(15);
+    padding-right: rem(15);
+
+    @include mq(md) {
+    padding-top: rem(93);
+    padding-left: rem(180);
+    padding-right: rem(180);
+    padding-bottom: rem(98);
+    }
+}
+
+.section-title__wrapper--information {
+    margin-top: rem(-3);
+}
+
 .illustrated-book__container {
-    margin-top: rem(24);
+    margin-top: rem(27);
     @include mq(md) {
     margin-top: rem(40);
     } 
@@ -19,6 +36,6 @@ padding: rem(100) 0;
 .illustrated-book__content {
    margin-top: rem(24);
    @include mq(md) {
-   margin-top: rem(41);
+   margin-top: rem(58.5);
    }
 }

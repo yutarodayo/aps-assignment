@@ -20,10 +20,10 @@
 }
 
 .blog__inner {
-  padding-top: rem(80);
+  padding-top: rem(77);
 
   @include mq(md) {
-    padding-top: rem(100);
+    padding-top: rem(89);
   }
 }
 
@@ -31,11 +31,11 @@
     margin-top: rem(24);
 
     @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(77);
     }
 }
 
-.button__space--blog {
+.button__wrapper.button__space--blog {
     margin-top: rem(40);
 
     @include mq(md) {

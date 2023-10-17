@@ -11,16 +11,27 @@
   font-size: rem(16);
   font-weight: $bold;
   line-height: 1.5;
-  padding-top: rem(40);
+  padding-top: rem(43.7);
+
+  @include mq(md) {
+  line-height: 1.75;
+  }
+}
+
+.table__header__space {
+  padding-top: rem(38.5);
+
+  @include mq(md) {
+  padding-top: rem(34);
+  }
 }
 
 tr:first-child>* {
     @include mq(md) {
         padding-top: 0;
     }
-    
 }
-    
+
 
 .table__line {
   border-top: rem(1) solid $accent;
@@ -28,20 +39,34 @@ tr:first-child>* {
 
 .table td {
     color: $text-base;
-  font-size: rem(14);
+  font-size: rem(13.8);
   font-weight: $regular;
   line-height: 1.7143;
-  padding-top: rem(8);
+  padding-top: rem(8.4);
+
+  
 }
 
 .table__item {
   text-align-last: left;
   width: calc(100% - 23%);
+
+  @include mq(md) {
+    letter-spacing: rem(2.04);
+    }
 }
 
-.table__data {
+.table td.table__data {
   text-align: right;
   width: 23%; //100/345
+  
+  font-family: $font-family_jp1;
+
+  @include mq(md) {
+    letter-spacing: rem(2);
+    line-height: 1.6;
+    padding-top: rem(3.5);
+    }
 }
 
 

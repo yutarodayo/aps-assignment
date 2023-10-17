@@ -19,12 +19,13 @@ font-size: rem(40);
     font-size: rem(12);
     color: $accent;
     text-align: center;
-
+margin-top: rem(1.5);
 }
 
 .section-title__white {
     @include mq(md) {
         color: $white;
+        margin-top: rem(1.4);
     }
 }
 

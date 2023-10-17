@@ -23,7 +23,7 @@
     
     width: 22.0454%; //194/880
     right: -10%;
-    bottom: -30%;
+    bottom: -29%;
     }
 }
 
@@ -31,18 +31,18 @@
     @include mq(md) {
     
     width: 21%; //301/1080 その後画像で微調整
-    top: 3%;
-    left: 5%;
+    top: 2.8%;
+    left: 7%;
     }
 }
 
 .little-image__kingyo-left--white {
     @include mq(md) {
     
-        left: 0;
+        left: -2%;
         max-width: rem(437);
-        top: 0;
-        width: 39.3472%;
+        top: 3%;
+        width: 40.6%;
         transform: translate(-13%, -117%);
     }
 }
@@ -50,8 +50,8 @@
 .little-image__dragon {
     @include mq(md) {
     
-        right: 12%;
-        bottom: 7%;
+        right: 12.6%;
+        bottom: 8%;
         width: 4.8611%; /* 71/1440 */
         max-width: rem(71);
         
@@ -74,7 +74,7 @@
 
 .little-image__kingyo-left--contact {
     right: -5%;
-    top: -5%;
+    top: -4%;
     max-width: rem(301);
     width: 35%; /* 109/295からの微調整 */
     position: absolute;
@@ -82,7 +82,7 @@
     @include mq(md) {
         
         right: -12%;
-        top: -8%;
+        top: -10%;
         max-width: rem(301);
         width: 59.2520%; /* 301/508からの微調整 */
 

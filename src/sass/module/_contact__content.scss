@@ -12,7 +12,24 @@
     font-size: rem(80);
     line-height: 1;
     font-weight: $regular;
+
+    @include mq(md) {
+    margin-top: rem(-24);
+    font-size: rem(38);
+    }
+
+    @include mq(lg) {
+        font-size: rem(50);
+    }
+
+    @include mq(xl) {
+font-size: rem(80);    
+    }
     
+}
+
+.section-title__ja.section-title__ja--contact {
+    margin-top: rem(-4);
 }
 
 .contact__text {
@@ -32,6 +49,6 @@ margin-top: rem(8);
    }
 }
 
-.button__wrapper {
-   margin-top: rem(40); 
+.button__wrapper.button__space--contact {
+    margin-top: rem(38);
 }

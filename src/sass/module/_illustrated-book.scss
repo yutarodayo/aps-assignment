@@ -19,7 +19,7 @@
 
 .illustrated-book__content {
 @include mq(md) {
-width: 50%;
+width: 45.5556%;//492/1080
 margin-left: rem(48);
 }
 }
@@ -30,7 +30,7 @@ margin-left: rem(48);
 
 .illustrated-book__title {
 font-size: rem(20);
-line-height: 1.2;
+line-height: 1.3;
 font-weight: $bold;
 color: $text-base;
 
@@ -40,7 +40,8 @@ font-size: rem(24);
 }
 
 .illustrated-book__body {
-margin-top: rem(8);
+margin-top: rem(11);
+letter-spacing: rem(-0.09);
 }
 
 .illustrated-book__text {
@@ -49,6 +50,10 @@ margin-top: rem(8);
     font-weight: $regular;
 }
 
-.button__space--illustrated-book {
-    margin-top: rem(40);
+.button__wrapper.button__space--illustrated-book {
+    margin-top: rem(37);
+
+    @include mq(md) {
+    margin-top: rem(36);
+    }
 }

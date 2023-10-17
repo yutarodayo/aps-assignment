@@ -24,12 +24,12 @@
   align-items: center;
   justify-content: space-between;
   height: inherit;
-  padding-left: rem(15);
+  padding-left: rem(13.6);
   padding-right: rem(15);
 
   @include mq(md) {
-    padding-left: rem(40);
-    padding-right: rem(40);
+    padding-left: rem(36);
+    padding-right: rem(21);
   }
 }
 
@@ -42,10 +42,11 @@
   height: inherit;
   display: flex;
   align-items: center;
-  width: rem(102);
+  width: rem(106);
+  padding-top: rem(5);
 
   @include mq(md) {
-    width: rem(133);
+    width: rem(142);
   }
 }
 

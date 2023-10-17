@@ -8,11 +8,15 @@
 
 .sns__icon {
     display: block;
-    padding-top: rem(16);
+    padding-top: rem(8);
     padding-left: rem(8);
     padding-right: rem(8);
     // width: 7.2727%; //24/330
     cursor: pointer;
+
+    @include mq(md) {
+    padding-top: rem(25);
+    }
     
 }
 
@@ -21,7 +25,7 @@
   }
 
 .sns__icon:first-child {
-    padding-left: 0;
+    padding-left: rem(3);
 }
 .sns__icon img {
 width: rem(24);

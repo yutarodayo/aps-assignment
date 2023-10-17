@@ -22,14 +22,23 @@ object-fit: cover;
   width: 50%;
   height: 100vh;
   left: 0;
+  
+}
+
+.loading-animation__left img{
+  object-position: 100% 50%;
 }
 
 .loading-animation__right {
   width: 50%;
   height: 100vh;
   left: 50%;
-
 }
+
+.loading-animation__right img {
+  object-position: 0% 50%;
+}
+
 
 .loading__content {
   opacity: 0;

@@ -12,9 +12,7 @@ const title = $(".loading__content");
 $(document).ready(function() {
   mainContent.css("display", "none")
   title.css("opacity", "1");
-  /*===================================================
-  
-  ===================================================*/
+
   setTimeout(function() {
     title.css("opacity", "0");
   }, 1000); 
@@ -37,13 +35,8 @@ $(document).ready(function() {
           requestAnimationFrame(monitorLeftImageMovement);
       }
   }
-  
-  // setTimeout(function() {
-  //   rightImage.css("animation", "slideUpRight 2s forwards");
-  // }, 2200);  // 1秒遅延で右画像のアニメーションを開始
 
   // フラッシュとタイトルのフェードイン後の処理
-
   setTimeout(function() {
     // アニメーション要素をフェードアウト
     loadingAnimation.fadeOut(1500);
@@ -82,10 +75,11 @@ $(".js-hamburger").on("click", function (e) {
   swiper main-view
   ===================================================*/
   const mvswiper = new Swiper(".main-view__swiper", {
-        
+    autoplay: { // 自動再生
+      delay: 3000, // 3秒後に次のスライド
+    },
     loop: true,
 
-    // スライドの表示枚数：768px未満の場合
   slidesPerView: 1,
   spaceBetween: 0,
 
@@ -123,20 +117,20 @@ $(".js-hamburger").on("click", function (e) {
     },
     
     750: {
-      slidesPerView: 2.5,
-      spaceBetween: 40,
+      slidesPerView: 2.6,
+      spaceBetween: 28,
     //スライド間の余白を指定（px）。
     // CSSで margin を付けるとスライドの位置がずれていくことがあるため、こちらで指定するのが推奨。
     },
     
     1250: {
       slidesPerView: 3,
-      spaceBetween: 40,
+      spaceBetween: 28,
     },
 
     1440: {
-      slidesPerView: 3.4,
-      spaceBetween: 40,
+      slidesPerView: 3.45,
+      spaceBetween: 28,
     },
 
   },
@@ -178,17 +172,35 @@ $(function () {
     let footHeight = $("footer").innerHeight();
     if (scrollHeight - scrollPosition <= footHeight) {
  // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+ if ($(window).width() >= 768) {
+  // ブレイクポイント768px以上の場合
       $("#to_top").css({
         position: "absolute",
-        bottom: footHeight + 15,
+        bottom: footHeight + 23,
+      });
+    } else {
+ // ブレイクポイント768px未満の場合
+      $("#to_top").css({
+        position: "absolute",
+        bottom: footHeight + 15, // ブレイクポイント768px未満の場合のbottom位置
+      });
+    }
+  } else {
+    // ブレイクポイント768pxからの場合と未満の場合でbottom位置を設定
+    if ($(window).width() >= 768) {
+      $("#to_top").css({
+        position: "fixed",
+        bottom: "23px", // ブレイクポイント768pxからの場合のbottom位置
       });
     } else {
       $("#to_top").css({
         position: "fixed",
-        bottom: "15px",
+        bottom: "15px", // ブレイクポイント768px未満の場合のbottom位置
       });
     }
-  });
+  }
+  
+});
 });
 
 /*===================================================
