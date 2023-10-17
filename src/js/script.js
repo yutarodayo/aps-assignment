@@ -90,6 +90,26 @@ $(".js-hamburger").on("click", function (e) {
   /swiper main-view
   ===================================================*/
 
+  /*===================================================
+  スムーススクロール
+  ===================================================*/
+  $('a[href^="#"]').on("click", function () {
+    let header = $(".header").innerHeight();
+    let id =$(this).attr("href");
+    let position = 0;
+    if (id != "#") {
+      position = jQuery(id).offset().top - header;
+    }
+    $("html,body").animate(
+      {
+        scrollTop: position,
+      },
+      500
+    );
+  });
+  /*===================================================
+  /スムーススクロール
+  ===================================================*/
 
   /*===================================================
   swiper__campaign
@@ -100,7 +120,9 @@ $(".js-hamburger").on("click", function (e) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
+    autoplay: { // 自動再生
+      delay: 3000, // 3秒後に次のスライド
+    },
     loop: true,
 
     // スライドの表示枚数：768px未満の場合

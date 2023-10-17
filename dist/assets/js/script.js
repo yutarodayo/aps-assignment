@@ -82,6 +82,24 @@ jQuery(function ($) {
   ===================================================*/
 
   /*===================================================
+  スムーススクロール
+  ===================================================*/
+  $('a[href^="#"]').on("click", function () {
+    var header = $(".header").innerHeight();
+    var id = $(this).attr("href");
+    var position = 0;
+    if (id != "#") {
+      position = jQuery(id).offset().top - header;
+    }
+    $("html,body").animate({
+      scrollTop: position
+    }, 500);
+  });
+  /*===================================================
+  /スムーススクロール
+  ===================================================*/
+
+  /*===================================================
   swiper__campaign
   ===================================================*/
   var swiper = new Swiper(".campaign__swiper", {
@@ -90,6 +108,11 @@ jQuery(function ($) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
     },
+    autoplay: {
+      // 自動再生
+      delay: 3000 // 3秒後に次のスライド
+    },
+
     loop: true,
     // スライドの表示枚数：768px未満の場合
     slidesPerView: 1.2,

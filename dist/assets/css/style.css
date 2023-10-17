@@ -815,11 +815,16 @@ a {
 	cursor: pointer;
 	display: block;
 	max-width: 12.8125rem;
-	width: 36.3636%;
+	padding-right: 0.625rem;
+	width: 38.3636%;
 }
 
 .footer__logo:hover {
 	opacity: 0.5;
+}
+
+.sns__wrapper {
+	margin-top: 0.375rem;
 }
 
 .footer__flex-layout {
@@ -833,14 +838,6 @@ a {
 
 .footer-right__wrapper {
 	margin-left: 0.9375rem;
-}
-
-.footer-left1 {
-	width: 51.4388%;
-}
-
-.footer-left2 {
-	width: 48.5%;
 }
 
 .footer__items {
@@ -1845,6 +1842,10 @@ html {
 	margin-left: 2rem;
 }
 
+.footer__flex-layout {
+	margin-top: 0.625rem;
+}
+
 .footer-left__wrapper,
 .footer-right__wrapper {
 	display: flex;
@@ -1857,6 +1858,14 @@ html {
 .footer-right1,
 .footer-right2 {
 	width: calc((100% - 1rem) / 2);
+}
+
+.footer-left1 {
+	width: 51.4388%;
+}
+
+.footer-left2 {
+	width: 48.5%;
 }
 
 .footer-left2,
