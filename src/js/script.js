@@ -74,18 +74,16 @@ $(".js-hamburger").on("click", function (e) {
   /*===================================================
   swiper main-view
   ===================================================*/
+
+  $(document).ready(function() {
+
   const mvswiper = new Swiper(".main-view__swiper", {
     autoplay: { // 自動再生
       delay: 3000, // 3秒後に次のスライド
     },
     loop: true,
-
-  slidesPerView: 1,
-  spaceBetween: 0,
-
-
   });
-
+});
   /*===================================================
   /swiper main-view
   ===================================================*/
@@ -114,6 +112,8 @@ $(".js-hamburger").on("click", function (e) {
   /*===================================================
   swiper__campaign
   ===================================================*/
+  $(document).ready(function() {
+
   const swiper = new Swiper(".campaign__swiper", {
     // 前後の矢印
     navigation: {
@@ -124,6 +124,7 @@ $(".js-hamburger").on("click", function (e) {
       delay: 3000, // 3秒後に次のスライド
     },
     loop: true,
+    disableOnInteraction:false,
 
     // スライドの表示枚数：768px未満の場合
   slidesPerView: 1.2,
@@ -158,6 +159,7 @@ $(".js-hamburger").on("click", function (e) {
   },
 
   });
+});
 
   /*===================================================
   /swiper__campaign

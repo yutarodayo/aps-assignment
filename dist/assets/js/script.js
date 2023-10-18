@@ -66,17 +66,17 @@ jQuery(function ($) {
   /*===================================================
   swiper main-view
   ===================================================*/
-  var mvswiper = new Swiper(".main-view__swiper", {
-    autoplay: {
-      // 自動再生
-      delay: 3000 // 3秒後に次のスライド
-    },
 
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 0
+  $(document).ready(function () {
+    var mvswiper = new Swiper(".main-view__swiper", {
+      autoplay: {
+        // 自動再生
+        delay: 3000 // 3秒後に次のスライド
+      },
+
+      loop: true
+    });
   });
-
   /*===================================================
   /swiper main-view
   ===================================================*/
@@ -102,45 +102,48 @@ jQuery(function ($) {
   /*===================================================
   swiper__campaign
   ===================================================*/
-  var swiper = new Swiper(".campaign__swiper", {
-    // 前後の矢印
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    autoplay: {
-      // 自動再生
-      delay: 3000 // 3秒後に次のスライド
-    },
-
-    loop: true,
-    // スライドの表示枚数：768px未満の場合
-    slidesPerView: 1.2,
-    spaceBetween: 20,
-    breakpoints: {
-      450: {
-        slidesPerView: 1.5
+  $(document).ready(function () {
+    var swiper = new Swiper(".campaign__swiper", {
+      // 前後の矢印
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
       },
-      // スライドの表示枚数：768px以上の場合
-      600: {
-        slidesPerView: 2
-      },
-      750: {
-        slidesPerView: 2.6,
-        spaceBetween: 28
-        //スライド間の余白を指定（px）。
-        // CSSで margin を付けるとスライドの位置がずれていくことがあるため、こちらで指定するのが推奨。
+      autoplay: {
+        // 自動再生
+        delay: 3000 // 3秒後に次のスライド
       },
 
-      1250: {
-        slidesPerView: 3,
-        spaceBetween: 28
-      },
-      1440: {
-        slidesPerView: 3.45,
-        spaceBetween: 28
+      loop: true,
+      disableOnInteraction: false,
+      // スライドの表示枚数：768px未満の場合
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      breakpoints: {
+        450: {
+          slidesPerView: 1.5
+        },
+        // スライドの表示枚数：768px以上の場合
+        600: {
+          slidesPerView: 2
+        },
+        750: {
+          slidesPerView: 2.6,
+          spaceBetween: 28
+          //スライド間の余白を指定（px）。
+          // CSSで margin を付けるとスライドの位置がずれていくことがあるため、こちらで指定するのが推奨。
+        },
+
+        1250: {
+          slidesPerView: 3,
+          spaceBetween: 28
+        },
+        1440: {
+          slidesPerView: 3.45,
+          spaceBetween: 28
+        }
       }
-    }
+    });
   });
 
   /*===================================================

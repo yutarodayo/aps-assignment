@@ -840,6 +840,10 @@ a {
 	margin-left: 0.9375rem;
 }
 
+.footer-left1 {
+	width: 100%;
+}
+
 .footer__items {
 	color: #fff;
 	display: block;
