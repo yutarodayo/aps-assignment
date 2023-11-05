@@ -1,41 +1,41 @@
 @use "global" as *;
 
+.information {
+  background-color: $background_green;
+}
+
 .information__inner {
-padding-top: rem(80);
-padding-bottom: rem(84);
-background: $background_green;
+  padding-top: rem(80);
+  padding-bottom: rem(84);
+  max-width: rem(600);
 
-@include mq(md) {
-padding: rem(100) 0;
+  @include mq(md) {
+    padding: rem(100) 0;
+    max-width: rem(1440);
+  }
 }
-}
 
-.inner.information__inner {
-    padding-left: rem(15);
-    padding-right: rem(15);
-
-    @include mq(md) {
+.information__inner.inner {
+  @include mq(md) {
     padding-top: rem(93);
-    padding-left: rem(180);
-    padding-right: rem(180);
     padding-bottom: rem(98);
-    }
+  }
 }
 
 .section-title__wrapper--information {
-    margin-top: rem(-3);
+  margin-top: rem(-3);
 }
 
 .illustrated-book__container {
-    margin-top: rem(27);
-    @include mq(md) {
+  margin-top: rem(27);
+  @include mq(md) {
     margin-top: rem(40);
-    } 
+  }
 }
 
 .illustrated-book__content {
-   margin-top: rem(24);
-   @include mq(md) {
-   margin-top: rem(58.5);
-   }
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(58.5);
+  }
 }

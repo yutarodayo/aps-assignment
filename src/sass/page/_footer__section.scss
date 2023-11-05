@@ -1,24 +1,21 @@
 @use "global" as *;
 
-.footer__inner.inner {
-    padding-left: rem(12);
-    padding-right: rem(12);
-    padding-top: rem(48);
-    padding-bottom: rem(56);
+.footer__inner {
+  padding-top: rem(48);
+  padding-bottom: rem(56);
 
-    @include mq(md) {
-        padding-left: rem(180);
-        padding-right: rem(180);
-        padding-top: rem(80);
-        padding-bottom: rem(80);
-    }
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    max-width: rem(1440);
+  }
 }
 
 .footer__copy {
-    margin-top: rem(38);
+  margin-top: rem(38);
 
-    @include mq(md) {
+  @include mq(md) {
     margin-top: rem(76);
     letter-spacing: rem(0.96);
-    }
   }
+}

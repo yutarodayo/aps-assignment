@@ -58,13 +58,23 @@ $(document).ready(function() {
 /*===================================================
 drawer
 ===================================================*/
-$(".js-hamburger").on("click", function (e) {
-    e.preventDefault();
-    $(".js-hamburger").toggleClass("is-active");
-    $(".header").toggleClass("is-active");
-    $(".drawer__wrapper").toggleClass("is-active");
-    $(".drawer__background").toggleClass("is-active");
-    return false;
+
+  $(function(){ //読み込み待ってから実行
+    $(".js-hamburger").on("click", function (e) {
+      e.preventDefault();
+      if($(".js-hamburger").hasClass('is-active')){
+        $(".js-hamburger").removeClass('is-active');
+        $(".header").removeClass('is-active');
+          $('.drawer__wrapper').fadeOut(700);
+        
+      } else {
+        $(".js-hamburger").addClass('is-active');
+        $('.header').addClass('is-active');
+        $('.drawer__wrapper').css("opacity", "1");
+        $('.drawer__wrapper').addClass('is-active');
+        $('.drawer__wrapper').fadeIn(700);
+      }
+    });
   });
 
   /*===================================================
@@ -82,6 +92,11 @@ $(".js-hamburger").on("click", function (e) {
       delay: 3000, // 3秒後に次のスライド
     },
     loop: true,
+
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: "fade",
+
   });
 });
   /*===================================================
@@ -102,7 +117,7 @@ $(".js-hamburger").on("click", function (e) {
       {
         scrollTop: position,
       },
-      500
+      700
     );
   });
   /*===================================================
@@ -120,44 +135,23 @@ $(".js-hamburger").on("click", function (e) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    
     autoplay: { // 自動再生
       delay: 3000, // 3秒後に次のスライド
     },
     loop: true,
-    disableOnInteraction:false,
 
-    // スライドの表示枚数：768px未満の場合
-  slidesPerView: 1.2,
-  spaceBetween: 20,
+    // スライドの表示枚数
+    slidesPerView: "auto",
+    spaceBetween: 24,
+
   breakpoints: {
-    450: {
-      slidesPerView: 1.5,
-    },
-
-    // スライドの表示枚数：768px以上の場合
-    600: {
-      slidesPerView: 2,
-    },
-    
-    750: {
-      slidesPerView: 2.6,
-      spaceBetween: 28,
+    768: {
+      spaceBetween: 40,
     //スライド間の余白を指定（px）。
     // CSSで margin を付けるとスライドの位置がずれていくことがあるため、こちらで指定するのが推奨。
     },
-    
-    1250: {
-      slidesPerView: 3,
-      spaceBetween: 28,
-    },
-
-    1440: {
-      slidesPerView: 3.45,
-      spaceBetween: 28,
-    },
-
   },
-
   });
 });
 
@@ -185,7 +179,7 @@ $(function () {
       {
         scrollTop: 0,
       },
-      500
+      700
     );
     return false;
   });

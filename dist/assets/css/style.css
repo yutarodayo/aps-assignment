@@ -1,6 +1,6 @@
 body,
 html {
-	font-family: "Gotu", "sans-serif", "Lato", sans-serif, "Noto Sans JP", "Noto Serif JP", "sans-serif", "serif", "Noto Serif JP", "serif";
+	font-family: "Gotu", sans-serif, "Lato", sans-serif, "Noto Sans JP", "Noto Serif JP", sans-serif, serif, "Noto Serif JP", serif;
 }
 
 .u-desktop {
@@ -147,13 +147,9 @@ a {
 }
 
 .about-us__inner {
+	max-width: 37.5rem;
 	padding-bottom: 4.5625rem;
 	padding-top: 5rem;
-}
-
-.about-us__inner.inner {
-	padding-left: 0.875rem;
-	padding-right: 1.0625rem;
 }
 
 .about-us__container {
@@ -174,12 +170,21 @@ a {
 }
 
 .access__wrapper {
-	padding-left: 0.625rem;
-	padding-right: 0.625rem;
+	padding-left: 1.5625rem;
+	padding-right: 1.5625rem;
+}
+
+.section-title__blog {
+	margin-top: 4.8125rem;
 }
 
 .blog__inner {
-	padding-top: 4.8125rem;
+	max-width: 37.5rem;
+}
+
+.blog__inner.inner {
+	padding-left: 1.3125rem;
+	padding-right: 1.3125rem;
 }
 
 .blog-cards__space {
@@ -191,11 +196,8 @@ a {
 }
 
 .campaign__inner {
+	max-width: 37.5rem;
 	padding-top: 2.3125rem;
-}
-
-.campaign__content {
-	padding-left: 0.625rem;
 }
 
 .swiper__space {
@@ -209,13 +211,12 @@ a {
 }
 
 .contact__inner {
-	padding: 5rem 1.875rem 6.4375rem;
+	max-width: 37.5rem;
+	padding: 5rem 0 6.4375rem;
 }
 
-.footer__inner.inner {
+.footer__inner {
 	padding-bottom: 3.5rem;
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
 	padding-top: 3rem;
 }
 
@@ -228,15 +229,14 @@ a {
 	display: flex;
 }
 
-.information__inner {
-	background: #DDF0F1;
-	padding-bottom: 5.25rem;
-	padding-top: 5rem;
+.information {
+	background-color: #DDF0F1;
 }
 
-.inner.information__inner {
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
+.information__inner {
+	max-width: 37.5rem;
+	padding-bottom: 5.25rem;
+	padding-top: 5rem;
 }
 
 .section-title__wrapper--information {
@@ -268,9 +268,14 @@ a {
 	height: 100vh;
 }
 
-.price__inner.inner {
-	background-color: #DDF0F1;
-	padding: 4.75rem 0.9375rem 5.1875rem;
+.price {
+	background-color: #ddf0f1;
+}
+
+.price__inner {
+	max-width: 37.5rem;
+	padding-bottom: 5.1875rem;
+	padding-top: 4.75rem;
 }
 
 .price__content {
@@ -281,8 +286,13 @@ a {
 	margin-top: 2.25rem;
 }
 
+.voice__inner {
+	max-width: 37.5rem;
+}
+
 .voice__inner.inner {
-	padding: 5rem 0.9375rem 5.1875rem;
+	padding-bottom: 5.1875rem;
+	padding-top: 5rem;
 }
 
 .voice-cards__space {
@@ -342,7 +352,7 @@ a {
 .access__address {
 	color: #0D2936;
 	display: block;
-	font-family: "Noto Sans JP", "Noto Serif JP", "sans-serif", "serif", "Noto Serif JP", "serif";
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif, "Noto Serif JP", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -367,12 +377,11 @@ a {
 	box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
 	cursor: pointer;
 	display: block;
-	max-width: 20.8125rem;
-	width: 20.8125rem;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 }
 
 .blog-card:hover {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .blog-card__inner {
@@ -420,7 +429,6 @@ a {
 .blog__text {
 	font-size: 1rem;
 	font-weight: 400;
-	letter-spacing: -0.00875rem;
 	line-height: 1.5;
 }
 
@@ -428,7 +436,7 @@ a {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	row-gap: 2.5rem;
 }
 
@@ -439,6 +447,7 @@ a {
 }
 
 .button {
+	cursor: pointer;
 	display: inline-block;
 	position: relative;
 }
@@ -481,12 +490,17 @@ a {
 	transform: scale(1, 1);
 }
 
+.button__top:hover .button__top__span::before,
+.button__top:hover .button__top__span::after {
+	background-color: #408F95;
+}
+
 .button__top span {
 	position: relative;
 }
 
 .button__top span::before {
-	background: #fff;
+	background-color: #fff;
 	content: "";
 	height: 0.0625rem;
 	position: absolute;
@@ -522,6 +536,8 @@ a {
 	background-color: #fff;
 	box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
 	display: block;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
+	height: 100%;
 	max-width: 17.5rem;
 	width: 17.5rem;
 }
@@ -678,6 +694,7 @@ a {
 
 .contact__text {
 	color: #408F95;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.2857;
@@ -701,17 +718,17 @@ a {
 	margin-top: 2.5rem;
 }
 
-.pc-nav__items li {
+.pc-nav__title {
 	position: relative;
 }
 
-.pc-nav__items li:hover {
+.pc-nav__title:hover {
 	color: #fff;
 }
 
-.pc-nav__items li::after {
+.pc-nav__title::after {
 	background-color: #fff;
-	bottom: 0;
+	bottom: -0.25rem;
 	content: "";
 	height: 0.125rem;
 	left: 0;
@@ -722,8 +739,16 @@ a {
 	width: 100%;
 }
 
-.pc-nav__items li:hover::after {
+.pc-nav__title:hover::after {
 	transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.header {
+	transition: 0.7s all 0s;
+}
+
+.header.is-active {
+	background-color: #408F95;
 }
 
 .drawer__wrapper {
@@ -732,19 +757,15 @@ a {
 	height: 100vh;
 	left: 0;
 	margin-top: 5rem;
-	opacity: 0;
 	overflow: auto;
 	padding-bottom: 18.75rem;
 	position: fixed;
 	right: 0;
 	top: 0;
-	transition: all 0.7s;
 	width: 100%;
 }
 
 .drawer__wrapper.is-active {
-	display: block;
-	opacity: 1;
 	z-index: 9999;
 }
 
@@ -780,7 +801,7 @@ a {
 
 .drawer__item a:hover {
 	cursor: pointer;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .drawer__item--main {
@@ -807,8 +828,13 @@ a {
 
 .footer {
 	background-color: #408F95;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 	height: 100%;
 	width: 100%;
+}
+
+.footer__inner {
+	max-width: 37.5rem;
 }
 
 .footer__logo {
@@ -820,7 +846,7 @@ a {
 }
 
 .footer__logo:hover {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .sns__wrapper {
@@ -956,24 +982,33 @@ a {
 }
 
 .pc-nav__items {
+	align-items: center;
 	display: flex;
+	height: inherit;
 }
 
 .pc-nav__item {
 	color: #fff;
 	cursor: pointer;
-	display: block;
-	padding: 1.25rem 1.25rem;
-	padding-left: 1.25rem;
-	padding-right: 1.25rem;
+	height: inherit;
+	height: inherit;
 	text-align: center;
 }
 
 .pc-nav__item a {
+	align-items: center;
+	display: flex;
+	height: inherit;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.pc-nav__title--en {
 	font-size: 1.125rem;
 }
 
-.pc-nav__item p {
+.pc-nav__title--ja {
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 	font-size: 0.625rem;
 	margin-top: 0.0625rem;
 }
@@ -985,12 +1020,7 @@ a {
 	position: fixed;
 	right: 0;
 	top: 0;
-	transition: all 0.7s;
 	z-index: 9001;
-}
-
-.header.is-active {
-	background-color: #408F95;
 }
 
 .header__inner {
@@ -1013,11 +1043,30 @@ a {
 }
 
 .header__title:hover {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .illustrated-book__container {
 	width: 100%;
+}
+
+.illustrated-book__img {
+	padding-top: 65.7971%;
+	position: relative;
+}
+
+.illustrated-book__img img {
+	-o-object-fit: cover;
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.illustrated-book__content {
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 }
 
 .illustrated-book__header {
@@ -1049,8 +1098,8 @@ a {
 .inner {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 21px;
-	padding-right: 21px;
+	padding-left: 15px;
+	padding-right: 15px;
 	width: 100%;
 }
 
@@ -1065,9 +1114,9 @@ a {
 .little-image__kingyo-left--contact {
 	max-width: 18.8125rem;
 	position: absolute;
-	right: -5%;
-	top: -4%;
-	width: 35%; /* 109/295からの微調整 */
+	right: 0.2%;
+	top: -4.1%;
+	width: 31.3%; /* 109/295からの微調整 */
 }
 
 .loading-animation__wrapper {
@@ -1247,6 +1296,7 @@ position: absolute;
 
 .section-title__ja {
 	color: #408F95;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 	font-size: 0.75rem;
 	margin-top: 0.09375rem;
 	text-align: center;
@@ -1279,8 +1329,25 @@ position: absolute;
 	width: 1.5rem;
 }
 
+.campaign .swiper-slide {
+	width: -moz-max-content;
+	width: max-content;
+}
+
+.swiper-wrapper {
+	align-items: stretch;
+}
+
+.campaign__swiper {
+	margin-right: calc(50% - 50vw);
+}
+
 .swiper__padding {
-	padding: 0.25rem 0.25rem;
+	padding: 0.25rem 0.1rem;
+}
+
+.swiper-slide {
+	height: auto;
 }
 
 .swiper-button__wrapper {
@@ -1334,6 +1401,7 @@ position: absolute;
 
 .table {
 	border-collapse: collapse;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 	width: 100%;
 }
 
@@ -1370,7 +1438,7 @@ position: absolute;
 }
 
 .table td.table__data {
-	font-family: "Noto Sans JP", "Noto Serif JP", "sans-serif", "serif";
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 	text-align: right;
 	width: 23%;
 }
@@ -1391,6 +1459,7 @@ position: absolute;
 
 .text-box__text {
 	color: #0D2936;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 	font-size: 1rem;
 	letter-spacing: -0.00625rem;
 	line-height: 1.5;
@@ -1439,7 +1508,7 @@ body {
 }
 
 #to_top:hover {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .voice-card {
@@ -1447,12 +1516,11 @@ body {
 	box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
 	cursor: pointer;
 	display: block;
-	max-width: 21.5625rem;
-	width: 21.5625rem;
+	font-family: "Noto Sans JP", "Noto Serif JP", sans-serif, serif;
 }
 
 .voice-card:hover {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 .voice-card__inner {
@@ -1524,7 +1592,7 @@ body {
 }
 
 .voice-cards {
-	align-items: center;
+	align-items: stretch;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1546,6 +1614,7 @@ html {
 }
 
 .about-us__inner {
+	max-width: 90rem;
 	padding-bottom: 8.75rem;
 	padding-top: 8.75rem;
 	position: relative;
@@ -1553,8 +1622,6 @@ html {
 
 .about-us__inner.inner {
 	padding-bottom: 8.75rem;
-	padding-left: 11.375rem;
-	padding-right: 11.0625rem;
 	padding-top: 8.25rem;
 	position: relative;
 }
@@ -1582,22 +1649,31 @@ html {
 	padding-right: 0;
 }
 
-.blog {
-	height: 51.6875rem;
+.blog__top {
 	position: relative;
 }
 
-.blog__top {
+.blog__top::before {
 	background-image: url(../images/common/blog_bg.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	content: "";
+	display: block;
 	height: 60.4593%;
+	left: 0;
+	position: absolute;
+	top: 0;
 	width: 100%;
+	z-index: -1;
+}
+
+.section-title__blog {
+	padding-top: 5.5625rem;
 }
 
 .blog__inner {
-	padding-top: 5.5625rem;
+	max-width: 90rem;
 }
 
 .blog-cards__space {
@@ -1612,10 +1688,6 @@ html {
 	padding-top: 6.8125rem;
 }
 
-.campaign__content {
-	padding-left: 11rem;
-}
-
 .swiper__space {
 	margin-top: 2.0625rem;
 }
@@ -1625,13 +1697,13 @@ html {
 }
 
 .contact__inner {
-	padding: 8.75rem 11.25rem 10rem;
+	max-width: 90rem;
+	padding: 8.75rem 0 10rem;
 }
 
-.footer__inner.inner {
+.footer__inner {
+	max-width: 90rem;
 	padding-bottom: 5rem;
-	padding-left: 11.25rem;
-	padding-right: 11.25rem;
 	padding-top: 5rem;
 }
 
@@ -1641,13 +1713,12 @@ html {
 }
 
 .information__inner {
+	max-width: 90rem;
 	padding: 6.25rem 0;
 }
 
-.inner.information__inner {
+.information__inner.inner {
 	padding-bottom: 6.125rem;
-	padding-left: 11.25rem;
-	padding-right: 11.25rem;
 	padding-top: 5.8125rem;
 }
 
@@ -1659,10 +1730,9 @@ html {
 	margin-top: 3.65625rem;
 }
 
-.price__inner.inner {
+.price__inner {
+	max-width: 90rem;
 	padding-bottom: 6.375rem;
-	padding-left: 11.25rem;
-	padding-right: 11.25rem;
 	padding-top: 5.5625rem;
 }
 
@@ -1678,8 +1748,13 @@ html {
 	margin-top: 5rem;
 }
 
+.voice__inner {
+	max-width: 90rem;
+}
+
 .voice__inner.inner {
-	padding: 8.375rem 11.25rem 9.0625rem;
+	padding-bottom: 9.0625rem;
+	padding-top: 8.375rem;
 }
 
 .voice-cards__space {
@@ -1727,14 +1802,21 @@ html {
 	text-indent: 0;
 }
 
+.blog-card {
+	max-width: 20.8125rem;
+	width: 30.664%;
+}
+
 .blog__title {
 	line-height: 1.75;
 }
 
 .blog-cards {
 	-moz-column-gap: 2.5rem;
+	align-items: stretch;
 	column-gap: 2.5rem;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .button__wrapper {
@@ -1837,6 +1919,10 @@ html {
 	width: 47.037%;
 }
 
+.footer__inner {
+	max-width: none;
+}
+
 .footer__header {
 	align-items: center;
 	display: flex;
@@ -1930,13 +2016,17 @@ html {
 	display: flex;
 }
 
-.illustrated-book__img {
+.illustrated-book__left {
 	width: 50%;
 }
 
-.illustrated-book__content {
+.illustrated-book__right {
 	margin-left: 3rem;
 	width: 45.5556%;
+}
+
+.illustrated-book__img {
+	padding-top: 65.926%;
 }
 
 .illustrated-book__title {
@@ -1948,9 +2038,9 @@ html {
 }
 
 .inner {
-	max-width: 1440px;
-	padding-left: 180px;
-	padding-right: 180px;
+	max-width: 1130px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .little-image__layout {
@@ -1965,7 +2055,7 @@ html {
 
 .little-image__coral {
 	bottom: -29%;
-	right: -10%;
+	right: calc(50% - min(39vw, 560px));
 	width: 22.0454%;
 }
 
@@ -1976,7 +2066,7 @@ html {
 }
 
 .little-image__kingyo-left--white {
-	left: -2%;
+	left: calc(50% - 41.5vw);
 	max-width: 27.3125rem;
 	top: 3%;
 	transform: translate(-13%, -117%);
@@ -1999,7 +2089,7 @@ html {
 
 .little-image__kingyo-left--contact {
 	max-width: 18.8125rem;
-	right: -12%;
+	right: calc(50% - min(46.5vw, 41.25rem));
 	top: -10%;
 	width: 59.252%; /* 301/508からの微調整 */
 }
@@ -2032,7 +2122,6 @@ html {
 
 .price__img--pc {
 	display: block;
-	max-width: 30.75rem;
 	position: relative;
 	width: 47.6825%;
 }
@@ -2091,7 +2180,7 @@ html {
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 /* 前へ次への矢印カスタマイズ */
@@ -2117,10 +2206,6 @@ html {
 
 .swiper-button-next::after {
 	background-image: url(../images/only_pc/allow_right.svg);
-}
-
-.swiper-slide {
-	margin-right: 2.0625rem;
 }
 
 .main-view__content {
@@ -2213,7 +2298,7 @@ tr:last-child > * {
 
 .voice-card {
 	max-width: 32.5rem;
-	width: calc(100% - 0.625rem);
+	width: 46.2963%;
 }
 
 .voice-card__inner {
@@ -2259,9 +2344,10 @@ tr:last-child > * {
 }
 
 .voice-cards {
-	-moz-column-gap: 2.5rem;
-	column-gap: 2.5rem;
+	-moz-column-gap: 3.7307%;
+	column-gap: 3.7307%;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 }
@@ -2326,22 +2412,6 @@ html {
 
 100% {
 	bottom: 0;
-}
-
-}
-
-@keyframes flash {
-
-0% {
-	opacity: 1;
-}
-
-50% {
-	opacity: 0.4;
-}
-
-100% {
-	opacity: 1;
 }
 
 }

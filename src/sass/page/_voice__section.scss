@@ -1,10 +1,20 @@
 @use "global" as *;
 
-.voice__inner.inner {
-  padding: rem(80) rem(15) rem(83);
+.voice__inner {
+  max-width: rem(600);
 
   @include mq(md) {
-    padding: rem(134) rem(180) rem(145);
+    max-width: rem(1440);
+  }
+}
+
+.voice__inner.inner {
+  padding-top: rem(80);
+  padding-bottom: rem(83);
+
+  @include mq(md) {
+    padding-top: rem(134);
+    padding-bottom: rem(145);
   }
 }
 
@@ -17,10 +27,10 @@
 }
 
 .button__wrapper.button__space--voice {
-    margin-top: rem(40);
-    padding-right: rem(1);
+  margin-top: rem(40);
+  padding-right: rem(1);
 
-    @include mq(md) {
+  @include mq(md) {
     margin-top: rem(80);
-    }
+  }
 }

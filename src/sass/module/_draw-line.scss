@@ -1,18 +1,18 @@
 @use "global" as *;
 
-.pc-nav__items li {
+.pc-nav__title {
 position: relative;
 
 }
 
-.pc-nav__items li:hover {
+.pc-nav__title:hover {
     color: $white;
 }
 
-.pc-nav__items li::after {
+.pc-nav__title::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: rem(-4);
     left: 0;
     width: 100%;
     height: rem(2);
@@ -22,6 +22,6 @@ position: relative;
     transform-origin: center top;/*上部中央基点*/
 }
 
-.pc-nav__items li:hover::after {
+.pc-nav__title:hover::after {
     transform: scale(1, 1);/*X方向にスケール拡大*/
 }

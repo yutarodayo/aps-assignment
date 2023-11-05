@@ -1,37 +1,39 @@
 @use "global" as *;
 
-.price__inner.inner {
-    padding: rem(76) rem(15) rem(83);
-    background-color: #DDF0F1;
+.price {
+  background-color: #ddf0f1;
+}
 
-    @include mq(md) {
+.price__inner {
+  padding-top: rem(76);
+  padding-bottom: rem(83);
+  max-width: rem(600);
+
+  @include mq(md) {
     padding-top: rem(89);
-    padding-left: rem(180);
-    padding-right: rem(180);
     padding-bottom: rem(102);
-    }
+    max-width: rem(1440);
+  }
 }
 
 .price__content {
-    margin-top: rem(26);
+  margin-top: rem(26);
 
-    @include mq(md) {
+  @include mq(md) {
     margin-top: rem(37);
-    }
+  }
 }
 
-
 .table__wrapper {
-    @include mq(md) {
+  @include mq(md) {
     margin-right: rem(90);
-    }
+  }
 }
 
 .button__wrapper.button__space--price {
-    margin-top: rem(36);
+  margin-top: rem(36);
 
-@include mq(md) {
+  @include mq(md) {
     margin-top: rem(80);
+  }
 }
-}
-

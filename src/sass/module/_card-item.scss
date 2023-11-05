@@ -5,7 +5,9 @@
   box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
   background-color: #fff;
   width: rem(280);
+  height: 100%;
   max-width: rem(280);
+  font-family: $font-family_jp1;
 
   @include mq(md) {
     width: rem(333);
@@ -54,6 +56,7 @@
   padding: rem(3.7) rem(12);
   display: inline-block;
   border: $accent rem(1) solid;
+  
 
   @include mq(md) {
     padding: rem(3) rem(15) rem(1);
@@ -68,10 +71,12 @@
   color: $text-base;
   padding-top: rem(6);
   padding-bottom: rem(5);
+  
 }
 
 .card-item__body {
   padding-top: rem(9);
+  
 
   @include mq(md) {
     padding-top: rem(16);
