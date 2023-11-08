@@ -24,6 +24,7 @@
     color: $white;
     width: 45.4545%;
     margin-top: rem(3);
+    padding-left: rem(5);
   }
 
   @include mq(lg) {
@@ -46,17 +47,17 @@
 .text-box__text {
 
   font-size: rem(16);
-  line-height: 1.5;
+  line-height: 1.45;
   color: $text-base;
   width: 100%;
 letter-spacing: rem(-0.1);
+font-family: $font-family_jp1;
 
   @include mq(md) {
     color: $white;
     height: auto;
     max-width: rem(400);
     margin-top: rem(7);
-    letter-spacing: rem(-0.29);
     line-height: 1.49;
   }
 }

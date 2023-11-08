@@ -3,6 +3,7 @@
 .table {
   border-collapse: collapse;
   width: 100%;
+  font-family: $font-family_jp1;
 }
 
 .table__header {
@@ -11,18 +12,27 @@
   font-size: rem(16);
   font-weight: $bold;
   line-height: 1.5;
-  padding-top: rem(43.7);
+  padding-top: rem(39);
+  padding-bottom: rem(1.9);
 
   @include mq(md) {
   line-height: 1.75;
+  padding-top: rem(41);
+  padding-bottom: 0;
   }
 }
 
 .table__header__space {
-  padding-top: rem(38.5);
+
+
+  @include mq(md) {
+    padding-top: rem(36);
+  }
+  
 
   @include mq(md) {
   padding-top: rem(34);
+  padding-bottom: rem(2.5);
   }
 }
 
@@ -41,10 +51,13 @@ tr:first-child>* {
     color: $text-base;
   font-size: rem(13.8);
   font-weight: $regular;
-  line-height: 1.7143;
+  line-height: 1.7;
   padding-top: rem(8.4);
 
-  
+  @include mq(md) {
+  padding-top: rem(5);
+  line-height: 1.7143;
+  }
 }
 
 .table__item {
@@ -52,9 +65,19 @@ tr:first-child>* {
   width: calc(100% - 23%);
 
   @include mq(md) {
-    letter-spacing: rem(2.04);
+    letter-spacing: rem(2.2);
     }
 }
+
+.table td.table__item--space {
+  padding-top: rem(5);
+  @include mq(md) {
+    padding-top: rem(11);
+  }
+  
+}
+
+
 
 .table td.table__data {
   text-align: right;
@@ -63,9 +86,9 @@ tr:first-child>* {
   font-family: $font-family_jp1;
 
   @include mq(md) {
-    letter-spacing: rem(2);
+    letter-spacing: rem(1);
     line-height: 1.6;
-    padding-top: rem(3.5);
+    padding-top: rem(9);
     }
 }
 

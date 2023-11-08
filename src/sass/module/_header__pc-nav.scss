@@ -1,42 +1,44 @@
 @use "global" as *;
 
 .pc-nav {
-display: none;
+  display: none;
 
-@include mq(md) {
+  @include mq(md) {
     height: inherit;
     display: flex;
     align-items: center;
     justify-content: end;
-}
+  }
 }
 
 .pc-nav__items {
-    display: flex;
-    
+  display: flex;
+  align-items: center;
+  height: inherit;
 }
 
 .pc-nav__item {
-    color: $white;
-    text-align: center;
-    display: block;
-    padding-left: rem(20);
-    padding-right: rem(20);
-    padding: rem(20) rem(20);
-    cursor: pointer;
-    
-}
-
-
-.pc-nav__item {
- 
+  height: inherit;
+  color: $white;
+  text-align: center;
+  height: inherit;
+  cursor: pointer;
 }
 
 .pc-nav__item a {
-    font-size: rem(18);
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding-left: rem(20);
+  padding-right: rem(20);
 }
 
-.pc-nav__item p {
-    font-size: rem(10);
-    margin-top: rem(1);
+.pc-nav__title--en {
+  font-size: rem(18);
+}
+
+.pc-nav__title--ja {
+  font-size: rem(10);
+  margin-top: rem(1);
+  font-family: $font-family_jp1;
 }

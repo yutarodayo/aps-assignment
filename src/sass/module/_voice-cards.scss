@@ -3,13 +3,13 @@
 .voice-cards {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-direction: column;
-    row-gap: rem(37);
+    row-gap: rem(39);
 
     @include mq(md) {
-       
+        flex-wrap: wrap;
     flex-direction: row;
-    column-gap: rem(40);
+    column-gap: 3.5%;
     }
 }

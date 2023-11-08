@@ -7,24 +7,25 @@
 @include mq(md) {
 padding-right: rem(5);
 }
-  
 }
 
 
 .button {
     display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 
 .button__top {
   font-size: rem(14);
-  line-height: 1.5714;
+  line-height: 1.45;
   color: $white;
   background-color: $accent;
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: rem(17) rem(92) rem(16) rem(37);
+  
+  padding: rem(18) rem(89) rem(16) rem(40);
   transition: 0.3s ease-in-out;
   z-index: 2;
   position: relative;
@@ -56,25 +57,34 @@ padding-right: rem(5);
     transform: scale(1, 1);
   }
 
+  .button__top:hover 
+  .button__top__span::before,
+  .button__top:hover
+  .button__top__span::after
+   {
+    background-color: $accent;
+  }
+
   .button__top span {
     position: relative;
   }
 
   .button__top span::before {
-    content: '';
+  content: '';
 	position: absolute;
 	top: 46%;
 	right: rem(-52);
 	transform: translateY(-50%) rotate(42deg);
 	width: rem(10);
 	height: rem(1);
-	background: $white;
+	background-color: $white;
 
     @include mq(md) {
     right: rem(-49);
     top: 40%;
     }
   }
+
 
   .button__top span::after {
     content: '';
@@ -92,7 +102,6 @@ padding-right: rem(5);
     top: 55%;
     }
   }
-
 
 .button__bottom {
   position: absolute;
