@@ -6,51 +6,51 @@ jQuery(function ($) {
   /*===================================================
   loading-animation
   ===================================================*/
-  // const mainContent = $(".main-content");
-  // const loadingAnimation = $(".loading-animation__wrapper");
-  // const leftImage = $(".loading-animation__left");
-  // const rightImage = $(".loading-animation__right");
-  // const title = $(".loading__content");
-  // $(document).ready(function() {
-  //   mainContent.css("display", "none")
-  //   title.css("opacity", "1");
+  const mainContent = $(".main-content");
+  const loadingAnimation = $(".loading-animation__wrapper");
+  const leftImage = $(".loading-animation__left");
+  const rightImage = $(".loading-animation__right");
+  const title = $(".loading__content");
+  $(document).ready(function() {
+    mainContent.css("display", "none")
+    title.css("opacity", "1");
 
-  //   setTimeout(function() {
-  //     title.css("opacity", "0");
-  //   }, 1000); 
+    setTimeout(function() {
+      title.css("opacity", "0");
+    }, 1000); 
 
-  //   setTimeout(function() {
-  //     leftImage.css("animation", "slideUpLeft 2s forwards");
-  //     monitorLeftImageMovement();
-  //   }, 2000); 
+    setTimeout(function() {
+      leftImage.css("animation", "slideUpLeft 2s forwards");
+      monitorLeftImageMovement();
+    }, 2000); 
 
-  //   let initialOffset = $('.loading-animation__left').offset().top;
+    let initialOffset = $('.loading-animation__left').offset().top;
 
-  //   function monitorLeftImageMovement() {
-  //       let currentOffset = $('.loading-animation__left').offset().top;
+    function monitorLeftImageMovement() {
+        let currentOffset = $('.loading-animation__left').offset().top;
 
-  //       if (initialOffset - currentOffset >= 60) {
-  //           $(".loading-animation__right").css("animation", "slideUpRight 2s forwards");
-  //       } else {
-  //           // 条件が満たされていない場合、次のアニメーションフレームで継続的にチェックします。
-  //           requestAnimationFrame(monitorLeftImageMovement);
-  //       }
-  //   }
+        if (initialOffset - currentOffset >= 60) {
+            $(".loading-animation__right").css("animation", "slideUpRight 2s forwards");
+        } else {
+            // 条件が満たされていない場合、次のアニメーションフレームで継続的にチェックします。
+            requestAnimationFrame(monitorLeftImageMovement);
+        }
+    }
 
-  //   // フラッシュとタイトルのフェードイン後の処理
-  //   setTimeout(function() {
-  //     // アニメーション要素をフェードアウト
-  //     loadingAnimation.fadeOut(1500);
+    // フラッシュとタイトルのフェードイン後の処理
+    setTimeout(function() {
+      // アニメーション要素をフェードアウト
+      loadingAnimation.fadeOut(1500);
 
-  //   }, 5500); 
+    }, 5500); 
 
-  //   setTimeout(function() {
+    setTimeout(function() {
 
-  //     // 通常ページのコンテンツをフェードイン
-  //     mainContent.fadeIn(1000);
-  //   }, 7000);
-  // },
-  // )
+      // 通常ページのコンテンツをフェードイン
+      mainContent.fadeIn(1000);
+    }, 7000);
+  },
+  )
 
   /*===================================================
   /loading-animation
@@ -131,9 +131,9 @@ jQuery(function ($) {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
       },
-      // autoplay: { // 自動再生
-      //   delay: 3000, // 3秒後に次のスライド
-      // },
+      autoplay: { // 自動再生
+        delay: 3000, // 3秒後に次のスライド
+      },
       loop: true,
       // スライドの表示枚数
       slidesPerView: "auto",
