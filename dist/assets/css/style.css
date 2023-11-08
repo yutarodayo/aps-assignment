@@ -1214,43 +1214,6 @@ a {
 	width: 37.3%; /* 128/345＋微調整 */
 }
 
-/* .about-us__imgbox {
-  position: relative;
-  width: 100%;
-  @include mq(md) {
-  max-width: rem(1080);
-  }
-} */
-
-/* .about-us__img--right {
-  height: 100%;
-  padding-top: 151.0752%; //w281/h186*100%
-position: absolute;
-  bottom: 0;
-  right: 0;
-  object-fit: cover;
-  max-width: rem(281);
-
-  @include mq(md) {
-    padding-top: 151.4629%; //w880/h581*100%
-    max-width: rem(880);
-  }
-} */
-
-/* .about-us__img--left {
-  height: 100%;
-  padding-top: 65.9794%; //w128/h194*100%
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-
-  @include mq(md) {
-    padding-top: 66.0066%; //w404/h606*100% カンプの画像サイズ数値おかしい、WとHが反対になってた、ノーマルモードでHの数値いじったら横に広がって気づいた
-    max-width: rem(404);
-  }
-} */
-
 .price__content {
 	width: 100%;
 }
