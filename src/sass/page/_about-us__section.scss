@@ -12,12 +12,11 @@
     max-width: rem(1440);
   }
 }
-.about-us__inner.inner {
- 
+.about-us__inner {
 
   @include mq(md) {
     position: relative;
-    padding-top: rem(132);
+    padding-top: rem(135);
     padding-bottom: rem(140);
     
   }
@@ -50,10 +49,11 @@
 }
 
 .button__wrapper.button__space--about-us {
-  margin-top: rem(46);
+  margin-top: rem(52);
   padding-right: rem(11);
 
   @include mq(md) {
-    margin-top: rem(37);
+    margin-top: rem(40);
+    padding-left: rem(6);
   }
 }

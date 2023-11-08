@@ -42,7 +42,7 @@
 .sns__wrapper {
   margin-top: rem(6);
   @include mq(md) {
-  margin-left: rem(32);
+  margin-left: rem(35);
 }
 }
 
@@ -57,16 +57,20 @@
 
 .footer-left__wrapper,
 .footer-right__wrapper {
-  width: 50%;
+  // width: calc((100% - 4.7059%) / 2);
   
   @include mq(md) {
   display: flex;
   }
 }
 
-.footer-right__wrapper {
-  margin-left: rem(15);
+.footer-left__wrapper {
+  width: 100%;
+}
 
+.footer-right__wrapper {
+  margin-left: 4.7059%; //16/340
+width: calc(100% - 4.7059%);
   @include mq(md) {
   margin-left: 0;
   }
@@ -98,13 +102,17 @@
 }
 
 .footer-left2,
-.footer-right1,
-.footer-right2 {
+.footer-right1 {
 @include mq(md) {
-margin-left: rem(16);
+margin-left: rem(3);
 }
 }
 
+.footer-right2 {
+  @include mq(md) {
+  margin-left: rem(15);
+  }
+}
 
 
 .footer__items {
@@ -113,7 +121,7 @@ margin-left: rem(16);
 }
 
 .footer__item {
-  padding-left: rem(25);
+  padding-left: rem(22);
   padding-top: rem(24.6);
 
   @include mq(md) {
@@ -130,7 +138,7 @@ margin-left: rem(16);
 .footer__item a {
   display: block;
   font-size: rem(16);
-  line-height: 1.125;
+  line-height: 1.08;
   letter-spacing: rem(-0.13);
 }
 
@@ -151,7 +159,7 @@ margin-left: rem(16);
 }
 
 .footer__item--main {
-  padding-top: rem(44);
+  padding-top: rem(43);
   font-weight: $bold;
 
   @include mq(md) {
@@ -161,7 +169,7 @@ margin-left: rem(16);
 
 
 .footer__item--main.footer__item--main__space {
-  padding-top: rem(39.8);
+  padding-top: rem(41);
 @include mq(md) {
   padding-top: rem(40.3);
 }
@@ -184,7 +192,7 @@ margin-left: rem(16);
   display: inline-block;
   transform: scale(1);
   position: absolute;
-  top: -18%;
+  top: -8%;
   left: rem(-22);
 }
 

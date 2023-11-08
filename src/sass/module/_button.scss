@@ -18,13 +18,14 @@ padding-right: rem(5);
 
 .button__top {
   font-size: rem(14);
-  line-height: 1.5714;
+  line-height: 1.45;
   color: $white;
   background-color: $accent;
   display: block;
   text-align: center;
   text-decoration: none;
-  padding: rem(17) rem(92) rem(16) rem(37);
+  
+  padding: rem(18) rem(89) rem(16) rem(40);
   transition: 0.3s ease-in-out;
   z-index: 2;
   position: relative;

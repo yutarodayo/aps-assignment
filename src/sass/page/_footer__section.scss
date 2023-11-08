@@ -12,10 +12,14 @@
 }
 
 .footer__copy {
-  margin-top: rem(38);
+  margin-top: rem(42);
+  font-family: $font-family_en;
+font-size: rem(12);
+letter-spacing: rem(-0.05);
 
   @include mq(md) {
-    margin-top: rem(76);
+    margin-top: rem(81);
     letter-spacing: rem(0.96);
+    padding-left: rem(1);
   }
 }

@@ -34,14 +34,12 @@ margin-right: calc(50% - 50vw);
 
   .swiper-button-prev,
   .swiper-rtl .swiper-button-next {
-    left: 47.9%;
-    margin-left: rem(239);
+    left: calc(50% + 20.87vw);
   }
 
   .swiper-button-next,
   .swiper-rtl .swiper-button-prev {
-    left: 48.7%;
-    margin-left: rem(389);
+    left: calc(50% + 32vw);
   }
 
   .swiper-button-prev,

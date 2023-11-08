@@ -27,7 +27,7 @@
 }
 
 .illustrated-book__container {
-  margin-top: rem(27);
+  margin-top: rem(28);
   @include mq(md) {
     margin-top: rem(40);
   }
@@ -36,6 +36,6 @@
 .illustrated-book__content {
   margin-top: rem(24);
   @include mq(md) {
-    margin-top: rem(58.5);
+    margin-top: rem(57);
   }
 }

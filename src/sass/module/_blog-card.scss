@@ -18,7 +18,11 @@
 }
 
 .blog-card__inner {
-    padding: rem(16) rem(16) rem(20);
+  padding: rem(16) rem(18) rem(24);
+  @include mq(md) {
+    padding: rem(16) rem(16) rem(24);
+  }
+  
 }
 
 .blog__img {
@@ -65,7 +69,7 @@ color: $text-base;
 
   .blog__text {
     font-size: rem(16);
-    line-height: 1.5;
+    line-height: 1.47;
     font-weight: $regular;
   
   }

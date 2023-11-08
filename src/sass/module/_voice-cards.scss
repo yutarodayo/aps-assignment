@@ -5,11 +5,11 @@
     justify-content: center;
     align-items: stretch;
     flex-direction: column;
-    row-gap: rem(37);
+    row-gap: rem(39);
 
     @include mq(md) {
         flex-wrap: wrap;
     flex-direction: row;
-    column-gap: 3.7307%;
+    column-gap: 3.5%;
     }
 }
